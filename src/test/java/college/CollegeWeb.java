@@ -9,6 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -35,7 +36,7 @@ public class CollegeWeb
   {
 		URL url = new URL(urln);
 		HttpURLConnection ht = (HttpURLConnection) url.openConnection();
-		ht.setConnectTimeout(800);
+		ht.setConnectTimeout(1000);
 		ht.connect();
 		Thread.sleep(800);
 		if(ht.getResponseCode()==200)
@@ -51,6 +52,7 @@ public class CollegeWeb
   {
 	  driver = new FirefoxDriver();
 	  driver.get("http://techsumtechnology.com");
+	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @AfterMethod

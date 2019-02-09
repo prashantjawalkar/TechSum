@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 54.89 s <<< FAILURE! - in TestSuite
+testWebsite(college.CollegeWeb)  Time elapsed: 23.109 s  <<< FAILURE!
+java.net.SocketTimeoutException: connect timed out
+	at college.CollegeWeb.test(CollegeWeb.java:39)
+	at college.CollegeWeb.testWebsite(CollegeWeb.java:30)
+

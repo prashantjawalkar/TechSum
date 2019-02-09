@@ -52,7 +52,7 @@ public class CollegeWeb
   {
 	  driver = new FirefoxDriver();
 	  driver.get("http://techsumtechnology.com");
-	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	  driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
   }
 
   @AfterMethod
